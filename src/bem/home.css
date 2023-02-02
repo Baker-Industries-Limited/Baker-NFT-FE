@@ -1,0 +1,273 @@
+.home_text1 {
+  font-family: "Michroma";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 70px;
+  text-align: center;
+  margin-bottom: 32px;
+  color: #ffffff;
+}
+
+.home_text2 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img1 {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 56px;
+}
+
+.home-section2 {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.home_text3 {
+  font-family: "Michroma";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+}
+
+.why {
+  color: #ffffff;
+}
+
+.why2 {
+  color: #f4aa00;
+}
+
+.home_text4 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+  margin-top: 32px;
+  width: 80%;
+  line-height: 2rem;
+}
+
+.home-section3 {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.home_text5 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+  margin-top: 32px;
+  width: 45%;
+  line-height: 2rem;
+  margin-bottom: 0px;
+}
+
+.home-sectiom3-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 64px;
+}
+
+.btn2 {
+  width: 330px;
+  height: 65px;
+  background-image: linear-gradient(180deg, #f4045e 0%, #f67d53 100%);
+  border: none;
+  font-family: "Michroma";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #ffffff;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 84px;
+}
+
+.home_text6 {
+  font-family: "Michroma";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.home_text7 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 2em;
+}
+
+.home-section4 {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.home-section4-inner0 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.home-section4-inner1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gold {
+  font-family: "Michroma";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  color: #ffffff;
+}
+
+.gold2 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 2em;
+}
+
+.goldimg1 {
+  width: 128px;
+  margin-right: 40px;
+}
+
+.goldimg2 {
+  width: 96px;
+  margin-right: 40px;
+}
+
+.goldimg3 {
+  width: 76px;
+  margin-right: 40px;
+}
+
+.section4-box1 {
+  margin-top: 100px;
+}
+
+.home-section5 {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home_text8 {
+  font-family: "Michroma";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+}
+
+.c1 {
+  color: #ffffff;
+}
+
+.c2 {
+  color: #f4aa00;
+}
+
+.home_text9 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+  width: 70%;
+  line-height: 2em;
+}
+
+.home_text10 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #f4aa00;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.home-section6 {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.faq-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home_text11 {
+  font-family: "Michroma";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  color: #f4aa00;
+}
+
+.home_text12 {
+  font-family: "Michroma";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  color: #ffffff;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.home_text13 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #ffffff;
+  padding-bottom: 32px;
+  width: 80%;
+}
+
+.faqbox {
+  border-top: 2px solid #ffffff;
+}

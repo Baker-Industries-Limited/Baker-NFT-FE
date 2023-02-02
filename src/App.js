@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import Home from "./pages/Home";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./bem/header.css";
+import "./bem/footer.css";
+import "./bem/home.css";
+import "./bem/mint.css";
+import Mint from "./pages/Mint";
+import Collections from "./pages/Collections";
+import { useSigner } from "wagmi";
 
 function App() {
+  const { data: signer } = useSigner();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="full-bg">
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route signer={signer} exact path="/mint" element={<Mint />} />
+          <Route exact path="/collections" element={<Collections />} />
+        </Routes>
+        <ToastContainer autoClose={15000} />
+      </BrowserRouter>
     </div>
   );
 }
