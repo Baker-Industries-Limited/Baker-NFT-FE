@@ -9,17 +9,17 @@ import "./bem/home.css";
 import "./bem/mint.css";
 import Mint from "./pages/Mint";
 import Collections from "./pages/Collections";
-import { useSigner } from "wagmi";
+import Resell from "./pages/Resell";
 
 function App() {
-  const { data: signer } = useSigner();
   return (
     <div className="full-bg">
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route signer={signer} exact path="/mint" element={<Mint />} />
+          <Route exact path="/mint" element={<Mint />} />
           <Route exact path="/collections" element={<Collections />} />
+          <Route exact path="/resell" element={<Resell />} />
         </Routes>
         <ToastContainer autoClose={15000} />
       </BrowserRouter>

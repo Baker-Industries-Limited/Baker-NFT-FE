@@ -10,6 +10,9 @@ export default function Sidebar({ toggle }) {
       <Link className="atag" to="/collections">
         <div className="side-item">Collections</div>
       </Link>
+      <Link className="atag" to="/resell">
+        <div className="side-item">Resell</div>
+      </Link>
     </div>
   );
 }

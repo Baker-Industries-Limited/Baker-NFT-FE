@@ -59,13 +59,13 @@ const bnbChain = {
 
 const { chains, provider } = configureChains(
   [
-    chain.mainnet,
+    /* chain.mainnet,
     chain.polygon,
     chain.optimism,
     chain.arbitrum,
     chain.goerli,
     chain.polygonMumbai,
-    bnbChain,
+    bnbChain, */
     bnbChainTest,
   ],
   [publicProvider()]

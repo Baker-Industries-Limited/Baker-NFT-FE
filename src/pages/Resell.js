@@ -10,7 +10,7 @@ import marketABI from "../abis/market.json";
 import { marketAddress, busdAddress } from "../utils/constants";
 import axios from "axios";
 
-export default function Mint(props) {
+export default function Resell() {
   const { data: signer } = useSigner();
   const selectRef = useRef();
 
@@ -77,7 +77,7 @@ export default function Mint(props) {
     );
 
     const filter = items.filter(
-      (item) => item.owner === "0xCF59aC8b973A5B1fF452f2d1654899F97edecdFF"
+      (item) => item.owner !== "0xCF59aC8b973A5B1fF452f2d1654899F97edecdFF"
     );
 
     setNFT(filter);
@@ -192,8 +192,10 @@ export default function Mint(props) {
       <Header />
       <main>
         <section className="mint-section1">
-          <div className="mint_text1">Mint {nft.length} BServe NFTs</div>
-          <div className="mint_text2">BServe</div>
+          <div className="mint_text1">Mint {nft.length} Baker NFTs</div>
+          <div className="mint_text2">
+            Baker Farms, Baker hotels, Baker Real Estate
+          </div>
         </section>
 
         <section className="mint-section2">
