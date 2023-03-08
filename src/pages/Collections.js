@@ -480,7 +480,7 @@ export default function Collections(props) {
                       />
                     </div>
                   ) : null}
-                  {item.price > Number(BigNumber.from(allowance)) ? (
+                  {Number(BigNumber.from(allowance)) > item.price ? (
                     <button
                       onClick={() => approve(item.price)}
                       className="nftbut"

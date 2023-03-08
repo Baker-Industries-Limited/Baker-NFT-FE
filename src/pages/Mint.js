@@ -171,6 +171,7 @@ export default function Mint(props) {
     const contract = await createBUSDContract();
     try {
       const allow = await contract.allowance(owner, spender);
+      console.log("all", Number(BigNumber.from(allow)));
       setAllowance(allow);
     } catch (error) {
       console.log(error);
@@ -252,7 +253,7 @@ export default function Mint(props) {
                       <div className="mint_text4">Mint fee</div>
                     </div>
                   </div>
-                  {item.price > Number(BigNumber.from(allowance)) ? (
+                  {Number(BigNumber.from(allowance)) > item.price ? (
                     <button
                       onClick={() => approve(item.price)}
                       className="nftbut"
