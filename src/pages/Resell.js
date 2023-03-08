@@ -254,7 +254,7 @@ export default function Resell() {
                       <div className="mint_text4">Mint fee</div>
                     </div>
                   </div>
-                  {Number(BigNumber.from(allowance)) > item.price ? (
+                  {item.price > Number(BigNumber.from(allowance / 10 ** 18)) ? (
                     <button
                       onClick={() => approve(item.price)}
                       className="nftbut"
