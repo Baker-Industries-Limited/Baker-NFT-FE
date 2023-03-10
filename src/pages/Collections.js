@@ -24,6 +24,7 @@ export default function Collections(props) {
   const tokenRef = useRef();
   const selectRef = useRef();
   const selectRef2 = useRef();
+  const selectRef3 = useRef();
 
   const [userNFT, setUSERNFT] = useState([]);
   const [back, setBack] = useState([]);
@@ -112,7 +113,6 @@ export default function Collections(props) {
     const contract1 = await createMarketContract();
     const mynfts = await contract1.fetchMyListItems();
 
-    console.log(mynfts);
     let item;
 
     const tokenList = await Promise.all(
@@ -170,11 +170,35 @@ export default function Collections(props) {
     }
   };
 
-  const claimFarm = async () => {
+  const claimReward = async () => {
+    const contract1 = await createMarketContract();
+    const mynfts = await contract1.fetchMyListItems();
+
+    let item;
+
+    const tokenList = await Promise.all(
+      mynfts.map(async (i) => {
+        item = {
+          tokenId: Number(BigNumber.from(i.tokenId)),
+          address: i.nftaddress,
+        };
+        return item;
+      })
+    );
+    const newList = [];
+    tokenList.map((item) => {
+      if (item.address === selectRef2.current.value) {
+        newList.push(item.tokenId);
+      }
+    });
+
     const contract = await createRewardContract();
     const id = toast.loading("Transaction in progress..");
     try {
-      const allow = await contract.claimReward(farm100Address);
+      const allow = await contract.claimReward(
+        selectRef2.current.value,
+        newList
+      );
       await allow.wait();
       toast.update(id, {
         render: "Transaction successfull",
@@ -323,11 +347,6 @@ export default function Collections(props) {
     }
   };
 
-  const checkFilter = (name) => {
-    const res = back.filter((item) => item.nftaddress === name);
-    setUSERNFT(res);
-  };
-
   const checkFilter2 = () => {
     let res;
     if (selectRef.current.value === "BakerFarmNFT ($100)") {
@@ -382,14 +401,9 @@ export default function Collections(props) {
         <section className="mint-section2">
           <div className="claims">
             <div className="claimbox">
-              <div className="mint_text5">Farm NFT Reward</div>
-
-              <div className="mint_text5">
-                <select onChange={getReward} ref={selectRef2} className="snft2">
-                  <option value={farm100Address}>BakerFarmNFT ($100)</option>
-                  <option value={farm200Address}>BakerFarmNFT ($200)</option>
-                </select>
-                <div>
+              <div className="claimbox1">
+                <div className="claimText1">
+                  {" "}
                   <NumericFormat
                     value={farm}
                     displayType={"text"}
@@ -398,14 +412,28 @@ export default function Collections(props) {
                   />{" "}
                   BUSD
                 </div>
+                <div>
+                  {" "}
+                  <select
+                    onChange={getReward}
+                    ref={selectRef2}
+                    className="snft2"
+                  >
+                    <option value={farm100Address}>BakerFarmNFT ($100)</option>
+                    <option value={farm200Address}>BakerFarmNFT ($200)</option>
+                  </select>
+                </div>
               </div>
-              <button onClick={claimFarm} className="nftbut2">
-                Claim
+              <div className="mint_text5">Farm NFT Reward</div>
+
+              <button onClick={claimReward} className="nftbut2">
+                Claim Rewards
               </button>
             </div>
 
             <div className="claimbox">
-              <div className="mint_text5">Buy Out NFT</div>
+              <div className="claimText1">Buy Out NFT</div>
+
               <div className="mint_text5">
                 <input
                   className="list2"
