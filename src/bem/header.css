@@ -5,6 +5,7 @@
   justify-content: space-between;
   display: flex;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .header-bg {
@@ -18,10 +19,13 @@
   padding-top: 10px;
 }
 
+.btn3 {
+  display: none;
+}
+
 .btn1 {
   width: 221px;
   height: 56px;
-  background: #f4aa00;
   border: none;
   font-family: "Michroma";
   font-style: normal;
@@ -31,17 +35,19 @@
   color: #ffffff;
   display: block;
   margin-right: 50px;
+  background: #f4aa00;
+  border-radius: 40px;
 }
 
 .sidebar {
-  height: 30vh;
   background: url("../../public/images/bg.png");
   padding-top: 48px;
   margin-bottom: 100px;
   position: absolute;
   padding-left: 30px;
-  width: 100%;
-  z-index: 2;
+  width: calc(100% - 30px);
+  z-index: 20;
+  padding-bottom: 30px;
 }
 
 .side-item {
@@ -50,8 +56,10 @@
   font-weight: 400;
   font-size: 32px;
   margin-bottom: 30px;
+  position: relative;
   /* Colour/White */
   color: #ffffff;
+  z-index: 30;
 }
 
 .animation1 {
@@ -66,4 +74,31 @@
 
 .atag {
   text-decoration: none;
+}
+
+@media (max-width: 765px) {
+  .btn1 {
+    display: none;
+  }
+
+  .side-item {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .btn3 {
+    width: 221px;
+    height: 56px;
+    border: none;
+    font-family: "Michroma";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    /* Colour/White */
+    color: #ffffff;
+    display: block;
+    margin-right: 50px;
+    background: #f4aa00;
+    border-radius: 40px;
+  }
 }

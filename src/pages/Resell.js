@@ -193,9 +193,7 @@ export default function Resell() {
       <main>
         <section className="mint-section1">
           <div className="mint_text1">Mint {nft.length} Baker NFTs</div>
-          <div className="mint_text2">
-            Baker Farms, Baker hotels, Baker Real Estate
-          </div>
+          <div className="mint_text2">BServe</div>
         </section>
 
         <section className="mint-section2">

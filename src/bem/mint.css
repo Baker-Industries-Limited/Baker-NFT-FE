@@ -6,8 +6,6 @@
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
-  z-index: 1;
 }
 
 .snft {
@@ -290,4 +288,144 @@
   font-weight: 900;
   font-size: 32px;
   color: #07242f;
+}
+
+@media (max-width: 765px) {
+  .nft {
+    width: 100%;
+    padding-bottom: 32px;
+    margin-right: 0px;
+    margin-bottom: 50px;
+  }
+
+  .nftimg {
+    width: 95%;
+    height: 350px;
+  }
+
+  .mint-section2 {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+  }
+
+  .mint_text4 {
+    font-family: "Michroma";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #828282;
+    margin-top: 16px;
+  }
+
+  .mint_text1 {
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 50px;
+  }
+
+  .mint-section1 {
+    background: rgba(255, 255, 255, 0.043);
+    height: 20vh;
+    background-size: cover;
+    margin-top: 80px;
+    width: 80%;
+  }
+
+  .mint_text2 {
+    font-size: 20px;
+    text-align: center;
+    color: #828282;
+    margin-top: 20px;
+    padding-bottom: 50px;
+  }
+
+  .mint-section2-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .filterx {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .search {
+    width: 100%;
+    height: 64px;
+    background: #1f1f1f;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #ffffff;
+    border: none;
+    padding-left: 10px;
+    margin-bottom: 30px;
+  }
+
+  .claims {
+    margin-bottom: 100px;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .claimbox {
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px;
+    width: 90%;
+    background-color: #38c1f5;
+    margin-top: 30px;
+  }
+
+  .claimbox1 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .searchc {
+    width: 100%;
+    height: 64px;
+    background: #1f1f1f;
+    border-radius: 4px;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+    border: none;
+  }
+
+  .mint_textc2 {
+    font-family: "Michroma";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #828282;
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .claimText1 {
+    font-size: 24px;
+  }
+
+  .nftbut2 {
+    width: 100%;
+    height: 46px;
+    background: #f4aa00;
+    border-radius: 32.9417px;
+    border: none;
+    display: block;
+    margin-top: 32px;
+    font-family: "Michroma";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #07242f;
+  }
 }
