@@ -1,0 +1,61 @@
+.fauset {
+  padding-top: 100px;
+  height: 100vh;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.finput {
+  width: 50%;
+  height: 54px;
+  background: #1f1f1f;
+  border-radius: 4px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  margin-top: 100px;
+}
+
+.fbutton {
+  width: 50%;
+  height: 46px;
+  background: #f4aa00;
+  border-radius: 32.9417px;
+  border: none;
+  display: block;
+  margin-top: 32px;
+  font-family: "Michroma";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #07242f;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fbtn {
+  width: 40%;
+  height: 56px;
+  border: none;
+  font-family: "Michroma";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  /* Colour/White */
+  color: #ffffff;
+  display: block;
+  margin-right: 50px;
+  background: #f4aa00;
+  border-radius: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}

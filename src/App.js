@@ -7,12 +7,14 @@ import "./bem/header.css";
 import "./bem/footer.css";
 import "./bem/home.css";
 import "./bem/mint.css";
+import "./bem/fauset.css";
 import Mint from "./pages/Mint";
 import Collections from "./pages/Collections";
 import Resell from "./pages/Resell";
 import Faq from "./pages/Faq";
 import Contact from "./pages/Contact";
 import Roadmap from "./pages/Roadmap";
+import Fauset from "./pages/Fauset";
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
           <Route exact path="/faq" element={<Faq />} />
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/roadmap" element={<Roadmap />} />
+          <Route exact path="/fauset" element={<Fauset />} />
         </Routes>
         <ToastContainer autoClose={15000} />
       </BrowserRouter>

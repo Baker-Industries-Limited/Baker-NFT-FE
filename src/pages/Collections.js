@@ -132,8 +132,6 @@ export default function Collections(props) {
         newList.push(item.tokenId);
       }
     });
-    console.log(newList);
-    console.log("reward3");
 
     const contract = await createRewardContract();
     const farmReward = await contract._claimReward(
