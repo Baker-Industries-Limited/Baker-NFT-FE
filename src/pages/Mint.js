@@ -7,7 +7,13 @@ import { toast } from "react-toastify";
 import busdABI from "../abis/busd.json";
 import nftABI from "../abis/nft.json";
 import marketABI from "../abis/market.json";
-import { marketAddress, busdAddress } from "../utils/constants";
+import {
+  marketAddress,
+  busdAddress,
+  farm100Address,
+  farm200Address,
+  farm500Address,
+} from "../utils/constants";
 import axios from "axios";
 
 export default function Mint(props) {
@@ -80,6 +86,8 @@ export default function Mint(props) {
       (item) => item.owner === "0xCF59aC8b973A5B1fF452f2d1654899F97edecdFF"
     );
 
+    console.log(filter);
+
     setNFT(filter);
     setBack(filter);
   };
@@ -87,17 +95,14 @@ export default function Mint(props) {
   const checkFilter = () => {
     let res;
     if (selectRef.current.value === "BakerFarmNFT ($100)") {
-      res = back.filter(
-        (item) =>
-          item.nftaddress === "0x1A3a36301Ed068Ba257f2F3c5205551713476c09"
-      );
+      res = back.filter((item) => item.nftaddress === farm100Address);
       console.log(res);
       setNFT(res);
     } else if (selectRef.current.value === "BakerFarmNFT ($200)") {
-      res = back.filter(
-        (item) =>
-          item.nftaddress === "0x326752C8a09a2631ed596000ab5328F18a94FfF6"
-      );
+      res = back.filter((item) => item.nftaddress === farm200Address);
+      setNFT(res);
+    } else if (selectRef.current.value === "BakerFarmNFT ($500)") {
+      res = back.filter((item) => item.nftaddress === farm500Address);
       setNFT(res);
     } else {
       setNFT(back);
@@ -142,6 +147,7 @@ export default function Mint(props) {
   };
 
   const buy = async (nftaddress, tokenId) => {
+    console.log(nftaddress, tokenId);
     const contract = await createMarketContract();
     const id = toast.loading("Transaction in progress..");
     try {
@@ -211,6 +217,7 @@ export default function Mint(props) {
                 <option>All</option>
                 <option>BakerFarmNFT ($100)</option>
                 <option>BakerFarmNFT ($200)</option>
+                <option>BakerFarmNFT ($500)</option>
               </select>
               {/*  <div className="artflex">
                 <img

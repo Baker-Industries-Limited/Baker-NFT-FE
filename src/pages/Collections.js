@@ -15,6 +15,7 @@ import {
   rewardAddress,
   farm100Address,
   farm200Address,
+  farm500Address,
 } from "../utils/constants";
 import axios from "axios";
 
@@ -124,18 +125,26 @@ export default function Collections(props) {
         return item;
       })
     );
+
     const newList = [];
     tokenList.map((item) => {
       if (item.address === selectRef2.current.value) {
         newList.push(item.tokenId);
       }
     });
+    console.log(newList);
+    console.log("reward3");
 
     const contract = await createRewardContract();
     const farmReward = await contract._claimReward(
       selectRef2.current.value,
+      address,
       newList
     );
+
+    console.log(selectRef2.current.value);
+
+    console.log(Number(BigNumber.from(farmReward)) / 10 ** 18);
     //const hotelReward = await contract._claimHotel(hotelAddress);
     //const realReward = await contract._claimReal(realAddress);
 
@@ -325,7 +334,10 @@ export default function Collections(props) {
     const contract = await createMarketContract();
     const id = toast.loading("Transaction in progress..");
     try {
-      const allow = await contract.buyOut(farm100Address, Number(tokenId));
+      const allow = await contract.buyOut(
+        selectRef3.current.value,
+        Number(tokenId)
+      );
       await allow.wait();
       toast.update(id, {
         render: "Buyout Successfull",
@@ -350,17 +362,14 @@ export default function Collections(props) {
   const checkFilter2 = () => {
     let res;
     if (selectRef.current.value === "BakerFarmNFT ($100)") {
-      res = back.filter(
-        (item) =>
-          item.nftaddress === "0x1A3a36301Ed068Ba257f2F3c5205551713476c09"
-      );
+      res = back.filter((item) => item.nftaddress === farm100Address);
       console.log(res);
       setUSERNFT(res);
     } else if (selectRef.current.value === "BakerFarmNFT ($200)") {
-      res = back.filter(
-        (item) =>
-          item.nftaddress === "0x326752C8a09a2631ed596000ab5328F18a94FfF6"
-      );
+      res = back.filter((item) => item.nftaddress === farm200Address);
+      setUSERNFT(res);
+    } else if (selectRef.current.value === "BakerFarmNFT ($500)") {
+      res = back.filter((item) => item.nftaddress === farm500Address);
       setUSERNFT(res);
     } else {
       setUSERNFT(back);
@@ -421,6 +430,7 @@ export default function Collections(props) {
                   >
                     <option value={farm100Address}>BakerFarmNFT ($100)</option>
                     <option value={farm200Address}>BakerFarmNFT ($200)</option>
+                    <option value={farm500Address}>BakerFarmNFT ($500)</option>
                   </select>
                 </div>
               </div>
@@ -432,7 +442,21 @@ export default function Collections(props) {
             </div>
 
             <div className="claimbox">
-              <div className="claimText1">Buy Out NFT</div>
+              <div className="claimbox1">
+                <div className="claimText1"> Buy Out NFT</div>
+                <div>
+                  {" "}
+                  <select
+                    onChange={getReward}
+                    ref={selectRef3}
+                    className="snft2"
+                  >
+                    <option value={farm100Address}>BakerFarmNFT ($100)</option>
+                    <option value={farm200Address}>BakerFarmNFT ($200)</option>
+                    <option value={farm500Address}>BakerFarmNFT ($500)</option>
+                  </select>
+                </div>
+              </div>
 
               <div className="mint_text5">
                 <input

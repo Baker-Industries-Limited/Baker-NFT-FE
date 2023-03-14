@@ -101,4 +101,14 @@
     background: #f4aa00;
     border-radius: 40px;
   }
+
+  .header-bg {
+    background: url("../../public/images/bg.png");
+    backdrop-filter: unset;
+    padding-bottom: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+  }
 }

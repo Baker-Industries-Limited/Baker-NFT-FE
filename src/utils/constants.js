@@ -3,11 +3,12 @@ import market from "../abis/market.json";
 import nft from "../abis/nft.json";
 
 export const busdAddress = "0x497D791157055eF9023b393348A310AD591e7796";
-export const marketAddress = "0x7f80fb6C939C1392b8673a86433348a59adB4B2C";
-export const rewardAddress = "0x7F9546B467E72d9986d24e7dBBf627aAB2bC7bE3";
+export const marketAddress = "0x2324B68f12E27641aFf171B067b2649396541611";
+export const rewardAddress = "0x138d872e79360Dcb191747859de1dA66cD46D72A";
 
-export const farm100Address = "0x1A3a36301Ed068Ba257f2F3c5205551713476c09";
-export const farm200Address = "0x326752C8a09a2631ed596000ab5328F18a94FfF6";
+export const farm100Address = "0xb94D51B3e0D3EeA41c3B9de4E7931e778C64D216";
+export const farm200Address = "0xa7AaF3abDe7B21b2f2a3430Eb88b81453882486b";
+export const farm500Address = "0x055F4Bdb0a6C27F0A8154A8709fd04617DC9BBEa";
 
 export const busdABI = busd.abi;
 export const marketABI = market.abi;
