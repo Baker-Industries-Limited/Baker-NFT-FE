@@ -8,6 +8,7 @@ import "./bem/footer.css";
 import "./bem/home.css";
 import "./bem/mint.css";
 import "./bem/rm.css";
+import "./bem/contact.css";
 import "./bem/fauset.css";
 import Mint from "./pages/Mint";
 import Collections from "./pages/Collections";

@@ -1,0 +1,104 @@
+.form {
+  background: rgba(255, 255, 255, 0.043);
+  backdrop-filter: blur(34.8523px);
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3.93071px;
+  margin-top: 64px;
+  padding-top: 100px;
+  padding-left: 134px;
+  padding-right: 134px;
+  padding-bottom: 100px;
+  margin-bottom: 100px;
+}
+
+.contact-head {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+
+  text-align: center;
+  margin-bottom: 32px;
+  color: #ffffff;
+}
+
+.form-box {
+  margin-bottom: 48px;
+}
+
+.label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffffff;
+  padding-bottom: 16px;
+  display: block;
+}
+
+.input {
+  border: 1px solid #767575;
+  border-radius: 40px;
+  height: 64px;
+  width: calc(100% - 14px);
+  padding-left: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.043);
+  /* Text/Body 2 */
+
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+
+  color: #ffffff;
+}
+
+.tarea {
+  border: 1px solid #767575;
+  border-radius: 40px;
+  height: 200px;
+  width: calc(100% - 15px);
+  padding-left: 10px;
+  background: rgba(255, 255, 255, 0.043);
+
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.contact-but {
+  width: 100%;
+  height: 59px;
+  border: none;
+  background: #f4aa00;
+  border-radius: 40px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+  .form {
+    width: calc(90% - 30px);
+    margin-top: 64px;
+    padding-top: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+  }
+
+  .contact-head {
+    font-size: 24px;
+  }
+}
