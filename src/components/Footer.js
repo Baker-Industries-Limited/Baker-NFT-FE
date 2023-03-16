@@ -31,11 +31,9 @@ export default function Footer() {
             </Link>
           </div>
           <div>
-            <Link to="/mint">
-              <div className="footer_text2">Whitepaper</div>
-            </Link>
-            <Link to="/collections">
-              <div className="footer_text2">FAQ</div>
+            <div className="footer_text2">Whitepaper</div>
+            <Link to="/roadmap">
+              <div className="footer_text2">Roadmap</div>
             </Link>
             <Link to="/contact">
               <div className="footer_text2">Contact us</div>
