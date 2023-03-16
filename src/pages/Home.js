@@ -13,16 +13,106 @@ export default function Home() {
       <Header />
       <main>
         <section>
-          <h2 className="home_text1">Baker Decentraciti</h2>
+          <h2 className="home_text1">The Future of Investments</h2>
           <p className="home_text2">
-            We are decentralizing property ownership by offering seamless
-            transactions using Blockchain-based protocol.
+            Earn 2X passive income minting unique Bserve NFTs (Non-Fungible
+            Tokens)
           </p>
 
-          <img className="img1" src="./images/img1.png" alt="img1" />
+          <img className="img1" src="./images/img1.svg" alt="img1" />
         </section>
 
-        <section className="home-section2">
+        <section className="home-sec2">
+          <div className="home-sec-text3">How to mint</div>
+
+          <div className="home-sec-flex">
+            <div className="home-sec-box">
+              <div className="home-circle">1</div>
+              <div className="home-sec-text1 ">Connect your wallet</div>
+              <div className="home-sec-text2">
+                Connect your Metamask wallet or any of your chosen wallet
+              </div>
+            </div>
+            <div className="home-sec-box">
+              <div className="home-circle">2</div>
+              <div className="home-sec-text1 ">Select NFT</div>
+              <div className="home-sec-text2">Browse to find NFT of choice</div>
+            </div>
+            <div className="home-sec-box">
+              <div className="home-circle">3</div>
+              <div className="home-sec-text1 ">Approve Transaction</div>
+              <div className="home-sec-text2">
+                To complete the minting process, you need to click the “Approve”
+                button
+              </div>
+            </div>
+            <div className="home-sec-box">
+              <div className="home-circle">4</div>
+              <div className="home-sec-text1 ">View Minted NFTs</div>
+              <div className="home-sec-text2">
+                You will receive your minted NFT in your wallet in few seconds.
+                You can also view your NFT on “My Collections” page
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="home-sec3">
+          <div className="home-sec-text4">About</div>
+          <div className="home-sec-text5">
+            Contrary to popular belief, you do not need a large sum of money to
+            invest in real estate, agriculture and the hospitality industry.
+            Motivated to solve this problem, Bserve provides you with the
+            opportunity to become a fractional owner of hotels, farms, and real
+            estate. Earning annual passive income from any of our four NFT
+            tiers.
+          </div>
+        </section>
+
+        <section className="home-sec4">
+          <img className="img11" src="./images/img11.svg" alt="bg" />
+        </section>
+
+        <section className="home-sec5">
+          <div>
+            <div className="home-sec-text6">Farm NFTs</div>
+            <div className="home-sec-text7">
+              Bserve Farms was launched for a larger number of people who do not
+              have a great deal of money to invest in agriculture but would
+              still like access to high growth potential investments that
+              agriculture presents. There are four variations of the Farm NFTs
+              and holding one of these will generate 20% or more per annum
+              depending on the NFT you mint.
+            </div>
+            <Link to="/mint">
+              <button className="home-sec-but1">Mint Farm NFTs</button>
+            </Link>
+          </div>
+        </section>
+
+        <section>
+          <div className="home-sec-text8">
+            Join Our Community & Get Early Updates{" "}
+          </div>
+          <div className="home-sec-text9">
+            Community building is our priority, it’s important for us to keep
+            forming, engaging and providing income-changing benefits to holders
+            of our NFTs.
+          </div>
+          <div className="sflex">
+            <div className="sbox">
+              <img src="./images/tele.svg" alt="tele" />
+            </div>
+            <div className="sbox">
+              <img src="./images/insta.svg" alt="tele" />
+            </div>
+            <div className="sbox">
+              <img src="./images/twit.svg" alt="tele" />
+            </div>
+          </div>
+        </section>
+
+        {/*  <section className="home-section2">
           <div>
             <h3 className="home_text3">
               <span className="why">Why</span>{" "}
@@ -37,9 +127,9 @@ export default function Home() {
             </p>
           </div>
           <img src="./images/img2.png" alt="img2" />
-        </section>
+        </section> */}
 
-        <section className="home-section3">
+        {/*   <section className="home-section3">
           <h3 className="home_text3">
             <span className="why">Mint</span>{" "}
             <span className="why2">Baker NFTs</span>{" "}
@@ -60,8 +150,8 @@ export default function Home() {
             <button className="btn2">Mint NFT</button>
           </Link>
         </section>
-
-        <section className="home-section4">
+ */}
+        {/*   <section className="home-section4">
           <div className="">
             <h4 className="home_text6">Membership</h4>
             <p className="home_text7">
@@ -115,8 +205,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
-        <section className="home-section5">
+        </section> */}
+
+        {/*   <section className="home-section5">
           <div>
             <div className="home_text8">
               <div className="c1">Join The</div>
@@ -140,8 +231,9 @@ export default function Home() {
             </div>
           </div>
           <img src="./images/shape.svg" alt="shape" />
-        </section>
-        <section className="home-section6">
+        </section> */}
+
+        {/*  <section className="home-section6">
           <h3 className="home_text11">FAQ</h3>
           <div>
             <div className="faqbox">
@@ -268,7 +360,7 @@ export default function Home() {
               ) : null}
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </div>

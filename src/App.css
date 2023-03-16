@@ -1,5 +1,6 @@
 .full-bg {
   background: url("../public/images/bg.png");
+  width: 100%;
 }
 
 a {
