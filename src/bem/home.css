@@ -230,7 +230,7 @@
 }
 
 .home-section6 {
-  width: 80%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
@@ -270,7 +270,10 @@
 }
 
 .faqbox {
-  border-top: 2px solid #ffffff;
+  background: rgba(255, 255, 255, 0.043);
+  backdrop-filter: blur(34.8523px);
+  margin-bottom: 32px;
+  padding: 40px;
 }
 
 .home-sec-box {
@@ -628,5 +631,33 @@
     margin-right: auto;
     text-align: center;
     line-height: 2rem;
+  }
+
+  .home_text12 {
+    font-family: "Michroma";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .home_text13 {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #ffffff;
+    padding-bottom: 32px;
+    width: 100%;
+    line-height: 2rem;
+  }
+
+  .home-section6 {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
   }
 }

@@ -1,0 +1,50 @@
+.faq-main {
+  padding-left: 96px;
+  padding-right: 96px;
+  padding-top: 96px;
+}
+
+.faq-text1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 70px;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.faq-text2 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 56px;
+}
+
+@media (max-width: 768px) {
+  .faq-main {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+  }
+
+  .faq-text1 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    margin-bottom: 24px;
+    color: #ffffff;
+    margin-top: 120px;
+  }
+
+  .faq-text2 {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 30px;
+  }
+}

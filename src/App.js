@@ -10,6 +10,7 @@ import "./bem/mint.css";
 import "./bem/rm.css";
 import "./bem/contact.css";
 import "./bem/fauset.css";
+import "./bem/faq.css";
 import Mint from "./pages/Mint";
 import Collections from "./pages/Collections";
 import Resell from "./pages/Resell";
