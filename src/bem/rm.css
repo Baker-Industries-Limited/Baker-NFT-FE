@@ -44,7 +44,6 @@
   width: 600px;
   height: 400px;
   background: #ffffff;
-  position: relative;
   margin-top: -380px;
   margin-left: 30px;
   border-radius: 16px;
@@ -54,7 +53,6 @@
   width: 600px;
   height: 400px;
   background: #f4f2fa;
-  position: relative;
   margin-top: -380px;
   margin-left: 60px;
   color: black;
