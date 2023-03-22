@@ -4,10 +4,6 @@ import Header from "../components/Header";
 import { Link } from "react-router-dom";
 
 export default function Home() {
-  const [faq1, setFaq1] = useState(false);
-  const [faq2, setFaq2] = useState(false);
-  const [faq3, setFaq3] = useState(false);
-  const [faq4, setFaq4] = useState(false);
   return (
     <div>
       <Header />
@@ -19,7 +15,7 @@ export default function Home() {
             Tokens)
           </p>
 
-          <img className="img1" src="./images/img1.svg" alt="img1" />
+          <img className="img1" src="./images/bond.png" alt="img1" />
         </section>
 
         <section className="home-sec2">
