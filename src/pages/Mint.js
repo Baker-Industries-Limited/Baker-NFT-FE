@@ -23,6 +23,7 @@ export default function Mint(props) {
   const [nft, setNFT] = useState([]);
   const [back, setBack] = useState([]);
   const [allowance, setAllowance] = useState(0);
+  const [app, setApp] = useState(0);
   const { address } = useAccount();
 
   const createMarketContract = async () => {
@@ -133,7 +134,8 @@ export default function Mint(props) {
         autoClose: 1000,
         closeButton: true,
       });
-      setTimeout(() => window.location.reload(), 5000);
+      setApp(1);
+      //setTimeout(() => window.location.reload(), 5000);
     } catch (error) {
       console.log(error);
       toast.update(id, {
@@ -193,6 +195,11 @@ export default function Mint(props) {
       behavior: "smooth",
     });
   }, [signer]);
+
+  useEffect(() => {
+    getAllNFTs();
+    checkAllowance(address, marketAddress);
+  }, [app]);
 
   return (
     <div>
