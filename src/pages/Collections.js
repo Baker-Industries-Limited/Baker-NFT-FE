@@ -30,6 +30,8 @@ export default function Collections(props) {
   const [userNFT, setUSERNFT] = useState([]);
   const [back, setBack] = useState([]);
   const [allowance, setAllowance] = useState(0);
+  const [appr, setAppr] = useState(0);
+  const [apprN, setApprN] = useState(0);
   const [farm, setFarm] = useState(0);
   const [hotel, setHotel] = useState(0);
   const [real, setReal] = useState(0);
@@ -47,6 +49,22 @@ export default function Collections(props) {
   const createNFTContract = async () => {
     const marketContract = new ethers.Contract(
       farm100Address,
+      nftABI.abi,
+      signer
+    );
+    return marketContract;
+  };
+  const createNFT200Contract = async () => {
+    const marketContract = new ethers.Contract(
+      farm200Address,
+      nftABI.abi,
+      signer
+    );
+    return marketContract;
+  };
+  const createNFT500Contract = async () => {
+    const marketContract = new ethers.Contract(
+      farm500Address,
       nftABI.abi,
       signer
     );
@@ -255,11 +273,23 @@ export default function Collections(props) {
     }
   };
 
-  const approveNFT = async (tokenId) => {
+  const approveNFT = async (tokenId, price) => {
+    console.log(tokenId);
     if (tokenId === "") {
       return toast.error("Please enter  amount");
     }
-    const contract = await createNFTContract();
+
+    let contract;
+    console.log(price);
+
+    if (price === 100) {
+      contract = await createNFTContract();
+    } else if (price === 200) {
+      contract = await createNFT200Contract();
+    } else if (price === 500) {
+      contract = await createNFT500Contract();
+    }
+
     const id = toast.loading("Approval in progress..");
     try {
       const allow = await contract.approve(marketAddress, tokenId);
@@ -271,7 +301,9 @@ export default function Collections(props) {
         autoClose: 1000,
         closeButton: true,
       });
-      setTimeout(() => window.location.reload(), 5000);
+      //setTimeout(() => window.location.reload(), 5000);
+      const newa = apprN + 1;
+      setApprN(newa);
     } catch (error) {
       toast.update(id, {
         render: `${error.reason}`,
@@ -312,7 +344,9 @@ export default function Collections(props) {
         autoClose: 1000,
         closeButton: true,
       });
-      setTimeout(() => window.location.reload(), 5000);
+      //setTimeout(() => window.location.reload(), 5000);
+      const newa = appr + 1;
+      setAppr(newa);
     } catch (error) {
       console.log(error);
       toast.update(id, {
@@ -389,6 +423,11 @@ export default function Collections(props) {
       behavior: "smooth",
     });
   }, [signer]);
+
+  useEffect(() => {
+    getMyNFTs();
+    checkAllow(address, marketAddress);
+  }, [appr, apprN]);
 
   return (
     <div>
@@ -552,7 +591,7 @@ export default function Collections(props) {
                     </button>
                   ) : item.approval !== marketAddress ? (
                     <button
-                      onClick={() => approveNFT(item.tokenId)}
+                      onClick={() => approveNFT(item.tokenId, item.price)}
                       className="nftbut"
                     >
                       Approve NFT

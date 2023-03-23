@@ -12,7 +12,7 @@ export default function Header() {
     <div className="header-bg">
       <div className="header">
         <Link className="atag" to="/">
-          <img src="./images/logo.svg" alt="logo" />
+          <img className="lg" src="./images/lg.svg" alt="logo" />
         </Link>
 
         <div className="inner-header">
