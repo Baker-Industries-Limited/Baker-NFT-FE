@@ -21,6 +21,7 @@ export default function Mint(props) {
   const selectRef = useRef();
 
   const [nft, setNFT] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [back, setBack] = useState([]);
   const [allowance, setAllowance] = useState(0);
   const [app, setApp] = useState(0);
@@ -45,6 +46,7 @@ export default function Mint(props) {
   };
 
   const getAllNFTs = async () => {
+    setLoading(true);
     const contract = await createMarketContract();
     const nfts = await contract.fetchListItems();
 
@@ -91,6 +93,7 @@ export default function Mint(props) {
 
     setNFT(filter);
     setBack(filter);
+    setLoading(false);
   };
 
   const checkFilter = () => {
@@ -287,7 +290,11 @@ export default function Mint(props) {
             })}
 
             <div className="mint_textc2">
-              {nft.length === 0 ? "No NFTS" : ""}
+              {loading === true
+                ? "Loading ......."
+                : nft.length === 0
+                ? "No NFTS"
+                : ""}
             </div>
           </div>
         </section>

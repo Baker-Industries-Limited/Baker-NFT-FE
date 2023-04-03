@@ -33,9 +33,8 @@ export default function Collections(props) {
   const [appr, setAppr] = useState(0);
   const [apprN, setApprN] = useState(0);
   const [farm, setFarm] = useState(0);
-  const [hotel, setHotel] = useState(0);
-  const [real, setReal] = useState(0);
   const { address } = useAccount();
+  const [loading, setLoading] = useState(false);
 
   const createMarketContract = async () => {
     const marketContract = new ethers.Contract(
@@ -609,7 +608,11 @@ export default function Collections(props) {
             })}
 
             <div className="mint_textc2">
-              {userNFT.length === 0 ? "No NFTS" : ""}
+              {loading === true
+                ? "Loading ......."
+                : userNFT.length === 0
+                ? "No NFTS"
+                : ""}
             </div>
           </div>
         </section>

@@ -6,17 +6,17 @@ export default function Footer() {
     <div className="foot">
       <div className="footer">
         <div>
-          <img src="./images/logo.svg" className="footer-logo" alt="logo" />
+          <img className="lg" src="./images/lg.svg" alt="logo" />
 
           {/*  <div className="social-footer">
             <img src="./images/telegram.svg" alt="telegram" />
             <img src="./images/instagram.svg" alt="instagram" />
             <img src="./images/twitter.svg" alt="twitter" />
           </div> */}
-          <div className="footer_text1">
+          {/*  <div className="footer_text1">
             {" "}
             &copy; 2023 Baker Industries Limited. All rights Reserved
-          </div>
+          </div> */}
         </div>
         <div className="footer-inner">
           <div>
