@@ -464,9 +464,9 @@ export default function Collections(props) {
                     ref={selectRef2}
                     className="snft2"
                   >
-                    <option value={farm100Address}>BakerFarmNFT ($100)</option>
-                    <option value={farm200Address}>BakerFarmNFT ($200)</option>
-                    <option value={farm500Address}>BakerFarmNFT ($500)</option>
+                    <option value={farm100Address}>$100 Tiers</option>
+                    <option value={farm200Address}>$200 Tiers</option>
+                    <option value={farm500Address}>$500 Tiers</option>
                   </select>
                 </div>
               </div>
@@ -487,9 +487,9 @@ export default function Collections(props) {
                     ref={selectRef3}
                     className="snft2"
                   >
-                    <option value={farm100Address}>BakerFarmNFT ($100)</option>
-                    <option value={farm200Address}>BakerFarmNFT ($200)</option>
-                    <option value={farm500Address}>BakerFarmNFT ($500)</option>
+                    <option value={farm100Address}>$100 Tiers</option>
+                    <option value={farm200Address}>$200 Tiers</option>
+                    <option value={farm500Address}>$500 Tiers</option>
                   </select>
                 </div>
               </div>
