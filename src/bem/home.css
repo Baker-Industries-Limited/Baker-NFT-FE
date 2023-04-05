@@ -338,7 +338,7 @@
 }
 
 .home-sec2 {
-  width: 80%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 96px;
@@ -351,7 +351,8 @@
   font-size: 48px;
   color: #ffffff;
   margin-bottom: 24px;
-  text-align: center;
+  text-align: left;
+  margin-left: 96px;
 }
 
 .home-sec-text5 {
@@ -361,11 +362,10 @@
   font-size: 24px;
   color: #ffffff;
   width: 48%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  text-align: left;
   line-height: 2rem;
   margin-bottom: 96px;
+  margin-left: 96px;
 }
 
 .home-sec4 {

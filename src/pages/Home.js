@@ -9,13 +9,36 @@ export default function Home() {
       <Header />
       <main>
         <section>
-          <h2 className="home_text1">The Future of Investments</h2>
+          <h2 className="home_text1">Investment Without Borders</h2>
           <p className="home_text2">
             Earn 2X passive income minting unique Bserve NFTs (Non-Fungible
             Tokens)
           </p>
 
-          <img className="img1" src="./images/bond.png" alt="img1" />
+          <Link to="/mint">
+            <button className="home-mint">Mint NFTs</button>
+          </Link>
+
+          <div className="nft-home">
+            <img src="./images/c1.png" alt="c1" />
+            <img src="./images/c1.png" alt="c1" />
+            <img src="./images/c3.png" alt="c3" />
+          </div>
+        </section>
+
+        <section className="home-sec3">
+          <div className="home-sec-text4">About Bakerserve</div>
+          <div className="home-sec-text5">
+            Bakerserve is the world’s first token revolutionizing Traditional
+            Agriculture, Real Estate to web3. Contrary to popular belief, you do
+            not need a large sum of money to invest in real estate, agriculture
+            and the hospitality industry. Motivated to solve this problem,
+            Bserve provides you with the opportunity to become a fractional
+            owner of hotels, farms, and real estate. Earning annual passive
+            income from any of our four NFT tiers. Users may use the smart
+            contract integrated functions to mint, sell NFTs, without any
+            restrictions.
+          </div>
         </section>
 
         <section className="home-sec2">
@@ -51,22 +74,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
-
-        <section className="home-sec3">
-          <div className="home-sec-text4">About</div>
-          <div className="home-sec-text5">
-            Contrary to popular belief, you do not need a large sum of money to
-            invest in real estate, agriculture and the hospitality industry.
-            Motivated to solve this problem, Bserve provides you with the
-            opportunity to become a fractional owner of hotels, farms, and real
-            estate. Earning annual passive income from any of our four NFT
-            tiers.
-          </div>
-        </section>
-
-        <section className="home-sec4">
-          <img className="img11" src="./images/img11.svg" alt="bg" />
         </section>
 
         <section className="home-sec5">
