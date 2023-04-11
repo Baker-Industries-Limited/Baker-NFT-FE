@@ -1,15 +1,60 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
+import AnimatedLetters from "../components/AnimatedLetters";
+import Tilt from "react-parallax-tilt";
 
 export default function Home() {
+  const [letterClass, setLetterClass] = useState("text-animate");
+  const nameArray = [
+    "I",
+    "n",
+    "v",
+    "e",
+    "s",
+    "t",
+    "m",
+    "e",
+    "n",
+    "t",
+    "",
+    "W",
+    "i",
+    "t",
+    "h",
+    "o",
+    "u",
+    "t",
+    "",
+    "B",
+    "o",
+    "r",
+    "d",
+    "e",
+    "r",
+    "s",
+    ".",
+  ];
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLetterClass("text-animate-hover");
+    }, 4000);
+  }, []);
+
   return (
     <div>
       <Header />
       <main>
         <section>
-          <h2 className="home_text1">Investment Without Borders</h2>
+          <h2 className="home_text1">
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={nameArray}
+              idx={10}
+            />
+          </h2>
           <p className="home_text2">
             Earn 2X passive income minting unique Bserve NFTs (Non-Fungible
             Tokens)
@@ -20,9 +65,15 @@ export default function Home() {
           </Link>
 
           <div className="nft-home">
-            <img src="./images/c1.png" alt="c1" />
-            <img src="./images/c1.png" alt="c1" />
-            <img src="./images/c3.png" alt="c3" />
+            <Tilt>
+              <img className="cc" src="./images/c1.png" alt="c1" />
+            </Tilt>
+            <Tilt>
+              <img className="cc" src="./images/card2.png" alt="c1" />
+            </Tilt>
+            <Tilt>
+              <img className="cc" src="./images/c3.png" alt="c3" />
+            </Tilt>
           </div>
         </section>
 

@@ -7,6 +7,8 @@ import { toast } from "react-toastify";
 import busdABI from "../abis/busd.json";
 import nftABI from "../abis/nft.json";
 import marketABI from "../abis/market.json";
+import Tilt from "react-parallax-tilt";
+import { motion } from "framer-motion";
 import {
   marketAddress,
   busdAddress,
@@ -258,34 +260,39 @@ export default function Mint(props) {
           <div className="nftlist">
             {nft.map((item, index) => {
               return (
-                <div key={index} className="nft">
-                  <img className="nftimg" src={item.image} alt="nft1" />
-                  <div className="nftflex">
-                    <div>
-                      <div className="mint_text3 ">{item.name}</div>
-                      <div className="mint_text4">{item.name.slice(0, -3)}</div>
+                <Tilt className="">
+                  <div key={index} className="nft">
+                    <img className="nftimg" src={item.image} alt="nft1" />
+                    <div className="nftflex">
+                      <div>
+                        <div className="mint_text3 ">{item.name}</div>
+                        <div className="mint_text4">
+                          {item.name.slice(0, -3)}
+                        </div>
+                      </div>
+                      <div>
+                        <div className="mint_text3 "> {item.price} BUSD</div>
+                        <div className="mint_text4">Mint fee</div>
+                      </div>
                     </div>
-                    <div>
-                      <div className="mint_text3 "> {item.price} BUSD</div>
-                      <div className="mint_text4">Mint fee</div>
-                    </div>
+                    {item.price >
+                    Number(BigNumber.from(allowance / 10 ** 18)) ? (
+                      <button
+                        onClick={() => approve(item.price)}
+                        className="nftbut"
+                      >
+                        Approve
+                      </button>
+                    ) : (
+                      <button
+                        onClick={() => buy(item.nftaddress, item.tokenId)}
+                        className="nftbut"
+                      >
+                        Mint NFT
+                      </button>
+                    )}
                   </div>
-                  {item.price > Number(BigNumber.from(allowance / 10 ** 18)) ? (
-                    <button
-                      onClick={() => approve(item.price)}
-                      className="nftbut"
-                    >
-                      Approve
-                    </button>
-                  ) : (
-                    <button
-                      onClick={() => buy(item.nftaddress, item.tokenId)}
-                      className="nftbut"
-                    >
-                      Mint NFT
-                    </button>
-                  )}
-                </div>
+                </Tilt>
               );
             })}
 
