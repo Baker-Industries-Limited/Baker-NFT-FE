@@ -429,7 +429,7 @@ export default function Collections(props) {
   }, [appr, apprN]);
 
   return (
-    <div>
+    <div className="full-bg">
       <Header />
       <main>
         <section className="mint-section1">

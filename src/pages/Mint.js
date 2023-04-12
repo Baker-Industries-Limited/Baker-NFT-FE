@@ -207,7 +207,7 @@ export default function Mint(props) {
   }, [app]);
 
   return (
-    <div>
+    <div className="full-bg">
       <Header />
       <main>
         <section className="mint-section1">

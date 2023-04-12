@@ -4,7 +4,7 @@ import Header from "../components/Header";
 
 export default function Roadmap() {
   return (
-    <div>
+    <div className="full-bg">
       <Header />
       <main className="rmain">
         <div className="rm-text1">Bserve Roadmap 2023</div>

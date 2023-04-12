@@ -188,11 +188,11 @@ export default function Resell() {
   }, [signer]);
 
   return (
-    <div>
+    <div className="full-bg">
       <Header />
       <main>
         <section className="mint-section1">
-          <div className="mint_text1">Mint {nft.length} Baker NFTs</div>
+          <div className="mint_text1">RESELL Baker NFTs</div>
           <div className="mint_text2">BServe</div>
         </section>
 

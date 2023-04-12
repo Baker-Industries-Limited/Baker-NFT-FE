@@ -49,7 +49,7 @@ export default function Fauset() {
     }
   };
   return (
-    <div>
+    <div className="full-bg">
       <div className="fauset">
         <div className="mint_text1">GET TEST BUSD</div>
         <ConnectButton.Custom>

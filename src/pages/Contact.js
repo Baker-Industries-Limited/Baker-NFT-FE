@@ -4,9 +4,9 @@ import Header from "../components/Header";
 
 export default function Contact() {
   return (
-    <div>
+    <div className="full-bg">
       <Header />
-      <main>
+      <main className="contact-main">
         <section className="form">
           <div className="contact-head">We would love to hear from you</div>
 

@@ -8,7 +8,7 @@ export default function Faq() {
   const [faq3, setFaq3] = useState(false);
   const [faq4, setFaq4] = useState(false);
   return (
-    <div>
+    <div className="full-bg">
       <Header />
       <main className="faq-main">
         <div className="faq-text1">FAQ</div>
