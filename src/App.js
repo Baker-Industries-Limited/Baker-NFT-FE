@@ -12,28 +12,17 @@ import "./bem/contact.css";
 import "./bem/fauset.css";
 import "./bem/faq.css";
 import "./App.scss";
-import Mint from "./pages/Mint";
-import Collections from "./pages/Collections";
-import Resell from "./pages/Resell";
-import Faq from "./pages/Faq";
-import Contact from "./pages/Contact";
-import Roadmap from "./pages/Roadmap";
-import Fauset from "./pages/Fauset";
+
+import { AnimatePresence } from "framer-motion";
+import AnimatedRoutes from "./AnimatedRoutes";
 
 function App() {
   return (
-    <div className="full-bg">
+    <div>
       <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/mint" element={<Mint />} />
-          <Route exact path="/collections" element={<Collections />} />
-          <Route exact path="/resell" element={<Resell />} />
-          <Route exact path="/faq" element={<Faq />} />
-          <Route exact path="/contact" element={<Contact />} />
-          <Route exact path="/roadmap" element={<Roadmap />} />
-          <Route exact path="/fauset" element={<Fauset />} />
-        </Routes>
+        <AnimatePresence>
+          <AnimatedRoutes />
+        </AnimatePresence>
         <ToastContainer autoClose={15000} />
       </BrowserRouter>
     </div>

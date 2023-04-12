@@ -4,6 +4,10 @@ import Header from "../components/Header";
 import { Link } from "react-router-dom";
 import AnimatedLetters from "../components/AnimatedLetters";
 import Tilt from "react-parallax-tilt";
+import Loader from "react-loaders";
+import { motion } from "framer-motion";
+import { fadeIn, text1, textVariant } from "../utils/motion";
+import PreLoader from "../components/Preloader";
 
 export default function Home() {
   const [letterClass, setLetterClass] = useState("text-animate");
@@ -38,135 +42,156 @@ export default function Home() {
   ];
 
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
     setTimeout(() => {
-      setLetterClass("text-animate-hover");
-    }, 4000);
+      //setLetterClass("text-animate-hover");
+    }, 6000);
   }, []);
 
   return (
-    <div>
-      <Header />
-      <main>
-        <section>
-          <h2 className="home_text1">
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={nameArray}
-              idx={10}
-            />
-          </h2>
-          <p className="home_text2">
-            Earn 2X passive income minting unique Bserve NFTs (Non-Fungible
-            Tokens)
-          </p>
+    <>
+      <PreLoader />
+      <motion.div className="full-bg">
+        <Header />
+        <main>
+          <section>
+            <h2 className="home_text1">
+              <AnimatedLetters
+                letterClass={letterClass}
+                strArray={nameArray}
+                idx={55}
+              />
+            </h2>
 
-          <Link to="/mint">
-            <button className="home-mint">Mint NFTs</button>
-          </Link>
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 8 }}
+              className="home_text2"
+            >
+              Earn 2X passive income minting unique Bserve NFTs (Non-Fungible
+              Tokens)
+            </motion.p>
 
-          <div className="nft-home">
-            <Tilt>
-              <img className="cc" src="./images/c1.png" alt="c1" />
-            </Tilt>
-            <Tilt>
-              <img className="cc" src="./images/card2.png" alt="c1" />
-            </Tilt>
-            <Tilt>
-              <img className="cc" src="./images/c3.png" alt="c3" />
-            </Tilt>
-          </div>
-        </section>
-
-        <section className="home-sec3">
-          <div className="home-sec-text4">About Bakerserve</div>
-          <div className="home-sec-text5">
-            Bakerserve is the world’s first token revolutionizing Traditional
-            Agriculture, Real Estate to web3. Contrary to popular belief, you do
-            not need a large sum of money to invest in real estate, agriculture
-            and the hospitality industry. Motivated to solve this problem,
-            Bserve provides you with the opportunity to become a fractional
-            owner of hotels, farms, and real estate. Earning annual passive
-            income from any of our four NFT tiers. Users may use the smart
-            contract integrated functions to mint, sell NFTs, without any
-            restrictions.
-          </div>
-        </section>
-
-        <section className="home-sec2">
-          <div className="home-sec-text3">How to mint</div>
-
-          <div className="home-sec-flex">
-            <div className="home-sec-box">
-              <div className="home-circle">1</div>
-              <div className="home-sec-text1 ">Connect your wallet</div>
-              <div className="home-sec-text2">
-                Connect your Metamask wallet or any of your chosen wallet
-              </div>
-            </div>
-            <div className="home-sec-box">
-              <div className="home-circle">2</div>
-              <div className="home-sec-text1 ">Select NFT</div>
-              <div className="home-sec-text2">Browse to find NFT of choice</div>
-            </div>
-            <div className="home-sec-box">
-              <div className="home-circle">3</div>
-              <div className="home-sec-text1 ">Approve Transaction</div>
-              <div className="home-sec-text2">
-                To complete the minting process, you need to click the “Approve”
-                button
-              </div>
-            </div>
-            <div className="home-sec-box">
-              <div className="home-circle">4</div>
-              <div className="home-sec-text1 ">View Minted NFTs</div>
-              <div className="home-sec-text2">
-                You will receive your minted NFT in your wallet in few seconds.
-                You can also view your NFT on “My Collections” page
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="home-sec5">
-          <div>
-            <div className="home-sec-text6">Farm NFTs</div>
-            <div className="home-sec-text7">
-              Bserve Farms was launched for a larger number of people who do not
-              have a great deal of money to invest in agriculture but would
-              still like access to high growth potential investments that
-              agriculture presents. There are four variations of the Farm NFTs
-              and holding one of these will generate 20% or more per annum
-              depending on the NFT you mint.
-            </div>
             <Link to="/mint">
-              <button className="home-sec-but1">Mint Farm NFTs</button>
+              <motion.button
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 8 }}
+                className="home-mint"
+              >
+                Mint NFTs
+              </motion.button>
             </Link>
-          </div>
-        </section>
 
-        <section>
-          <div className="home-sec-text8">
-            Join Our Community & Get Early Updates{" "}
-          </div>
-          <div className="home-sec-text9">
-            Community building is our priority, it’s important for us to keep
-            forming, engaging and providing income-changing benefits to holders
-            of our NFTs.
-          </div>
-          <div className="sflex">
-            <div className="sbox">
-              <img src="./images/tele.svg" alt="tele" />
+            <div className="nft-home">
+              <Tilt>
+                <img className="cc" src="./images/c1.png" alt="c1" />
+              </Tilt>
+              <Tilt>
+                <img className="cc" src="./images/card2.png" alt="c1" />
+              </Tilt>
+              <Tilt>
+                <img className="cc" src="./images/c3.png" alt="c3" />
+              </Tilt>
             </div>
-            <div className="sbox">
-              <img src="./images/insta.svg" alt="tele" />
-            </div>
-            <div className="sbox">
-              <img src="./images/twit.svg" alt="tele" />
-            </div>
-          </div>
-        </section>
+          </section>
 
-        {/*  <section className="home-section2">
+          <section className="home-sec3">
+            <div className="home-sec-text4">About Bakerserve</div>
+            <div className="home-sec-text5">
+              Bakerserve is the world’s first token revolutionizing Traditional
+              Agriculture, Real Estate to web3. Contrary to popular belief, you
+              do not need a large sum of money to invest in real estate,
+              agriculture and the hospitality industry. Motivated to solve this
+              problem, Bserve provides you with the opportunity to become a
+              fractional owner of hotels, farms, and real estate. Earning annual
+              passive income from any of our four NFT tiers. Users may use the
+              smart contract integrated functions to mint, sell NFTs, without
+              any restrictions.
+            </div>
+          </section>
+
+          <section className="home-sec2">
+            <div className="home-sec-text3">How to mint</div>
+
+            <div className="home-sec-flex">
+              <div className="home-sec-box">
+                <div className="home-circle">1</div>
+                <div className="home-sec-text1 ">Connect your wallet</div>
+                <div className="home-sec-text2">
+                  Connect your Metamask wallet or any of your chosen wallet
+                </div>
+              </div>
+              <div className="home-sec-box">
+                <div className="home-circle">2</div>
+                <div className="home-sec-text1 ">Select NFT</div>
+                <div className="home-sec-text2">
+                  Browse to find NFT of choice
+                </div>
+              </div>
+              <div className="home-sec-box">
+                <div className="home-circle">3</div>
+                <div className="home-sec-text1 ">Approve Transaction</div>
+                <div className="home-sec-text2">
+                  To complete the minting process, you need to click the
+                  “Approve” button
+                </div>
+              </div>
+              <div className="home-sec-box">
+                <div className="home-circle">4</div>
+                <div className="home-sec-text1 ">View Minted NFTs</div>
+                <div className="home-sec-text2">
+                  You will receive your minted NFT in your wallet in few
+                  seconds. You can also view your NFT on “My Collections” page
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="home-sec5">
+            <div>
+              <div className="home-sec-text6">Farm NFTs</div>
+              <div className="home-sec-text7">
+                Bserve Farms was launched for a larger number of people who do
+                not have a great deal of money to invest in agriculture but
+                would still like access to high growth potential investments
+                that agriculture presents. There are four variations of the Farm
+                NFTs and holding one of these will generate 20% or more per
+                annum depending on the NFT you mint.
+              </div>
+              <Link to="/mint">
+                <button className="home-sec-but1">Mint Farm NFTs</button>
+              </Link>
+            </div>
+          </section>
+
+          <section>
+            <div className="home-sec-text8">
+              Join Our Community & Get Early Updates{" "}
+            </div>
+            <div className="home-sec-text9">
+              Community building is our priority, it’s important for us to keep
+              forming, engaging and providing income-changing benefits to
+              holders of our NFTs.
+            </div>
+            <div className="sflex">
+              <div className="sbox">
+                <img src="./images/tele.svg" alt="tele" />
+              </div>
+              <div className="sbox">
+                <img src="./images/insta.svg" alt="tele" />
+              </div>
+              <div className="sbox">
+                <img src="./images/twit.svg" alt="tele" />
+              </div>
+            </div>
+          </section>
+
+          {/*  <section className="home-section2">
           <div>
             <h3 className="home_text3">
               <span className="why">Why</span>{" "}
@@ -183,7 +208,7 @@ export default function Home() {
           <img src="./images/img2.png" alt="img2" />
         </section> */}
 
-        {/*   <section className="home-section3">
+          {/*   <section className="home-section3">
           <h3 className="home_text3">
             <span className="why">Mint</span>{" "}
             <span className="why2">Baker NFTs</span>{" "}
@@ -205,7 +230,7 @@ export default function Home() {
           </Link>
         </section>
  */}
-        {/*   <section className="home-section4">
+          {/*   <section className="home-section4">
           <div className="">
             <h4 className="home_text6">Membership</h4>
             <p className="home_text7">
@@ -261,7 +286,7 @@ export default function Home() {
           </div>
         </section> */}
 
-        {/*   <section className="home-section5">
+          {/*   <section className="home-section5">
           <div>
             <div className="home_text8">
               <div className="c1">Join The</div>
@@ -287,7 +312,7 @@ export default function Home() {
           <img src="./images/shape.svg" alt="shape" />
         </section> */}
 
-        {/*  <section className="home-section6">
+          {/*  <section className="home-section6">
           <h3 className="home_text11">FAQ</h3>
           <div>
             <div className="faqbox">
@@ -415,8 +440,9 @@ export default function Home() {
             </div>
           </div>
         </section> */}
-      </main>
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </motion.div>
+    </>
   );
 }
