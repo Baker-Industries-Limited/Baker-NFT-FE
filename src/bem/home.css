@@ -22,6 +22,14 @@
   margin-top: 50px;
 }
 
+.home-sec-flex {
+  display: flex;
+}
+
+.himg {
+  margin-right: 150px;
+}
+
 .img1 {
   width: 100%;
   display: block;
@@ -55,6 +63,10 @@
   color: #f4aa00;
 }
 
+.homeh {
+  width: 50%;
+}
+
 .home_text4 {
   font-family: "Raleway";
   font-style: normal;
@@ -62,7 +74,6 @@
   font-size: 18px;
   color: #ffffff;
   margin-top: 32px;
-  width: 80%;
   line-height: 2rem;
 }
 
@@ -363,7 +374,7 @@
   font-weight: 400;
   font-size: 24px;
   color: #ffffff;
-  width: 48%;
+  width: 90%;
   text-align: left;
   line-height: 2rem;
   margin-bottom: 96px;

@@ -62,7 +62,7 @@ export default function Home() {
               <AnimatedLetters
                 letterClass={letterClass}
                 strArray={nameArray}
-                idx={55}
+                idx={50}
               />
             </h2>
 
@@ -87,7 +87,12 @@ export default function Home() {
               </motion.button>
             </Link>
 
-            <div className="nft-home">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 8.2 }}
+              className="nft-home"
+            >
               <Tilt>
                 <img className="cc" src="./images/c1.png" alt="c1" />
               </Tilt>
@@ -97,21 +102,28 @@ export default function Home() {
               <Tilt>
                 <img className="cc" src="./images/c3.png" alt="c3" />
               </Tilt>
-            </div>
+            </motion.div>
           </section>
 
           <section className="home-sec3">
-            <div className="home-sec-text4">About Bakerserve</div>
-            <div className="home-sec-text5">
-              Bakerserve is the world’s first token revolutionizing Traditional
-              Agriculture, Real Estate to web3. Contrary to popular belief, you
-              do not need a large sum of money to invest in real estate,
-              agriculture and the hospitality industry. Motivated to solve this
-              problem, Bserve provides you with the opportunity to become a
-              fractional owner of hotels, farms, and real estate. Earning annual
-              passive income from any of our four NFT tiers. Users may use the
-              smart contract integrated functions to mint, sell NFTs, without
-              any restrictions.
+            <div className="home-sec-flex">
+              <div className="homeh">
+                <div className="home-sec-text4">About Bakerserve</div>
+                <div className="home-sec-text5">
+                  Bakerserve is the world’s first token revolutionizing
+                  Traditional Agriculture, Real Estate to web3. Contrary to
+                  popular belief, you do not need a large sum of money to invest
+                  in real estate, agriculture and the hospitality industry.
+                  Motivated to solve this problem, Bserve provides you with the
+                  opportunity to become a fractional owner of hotels, farms, and
+                  real estate. Earning annual passive income from any of our
+                  four NFT tiers. Users may use the smart contract integrated
+                  functions to mint, sell NFTs, without any restrictions.
+                </div>
+              </div>
+              <Tilt>
+                <img className="himg" src="./images/card3.png" alt="c1" />
+              </Tilt>
             </div>
           </section>
 
