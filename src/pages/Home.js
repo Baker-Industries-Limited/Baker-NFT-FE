@@ -47,8 +47,8 @@ export default function Home() {
       left: 0,
     });
     setTimeout(() => {
-      //setLetterClass("text-animate-hover");
-    }, 6000);
+      setLetterClass("text-animate-hover");
+    }, 7500);
   }, []);
 
   return (
