@@ -15,6 +15,7 @@ import {
   farm100Address,
   farm200Address,
   farm500Address,
+  farm1000Address,
 } from "../utils/constants";
 import axios from "axios";
 
@@ -83,9 +84,13 @@ export default function Mint(props) {
           listId: i.listId,
         };
 
+        console.log(item);
+
         return item;
       })
     );
+
+    console.log(items);
 
     const filter = items.filter(
       (item) => item.owner === "0xCF59aC8b973A5B1fF452f2d1654899F97edecdFF"
@@ -109,6 +114,9 @@ export default function Mint(props) {
       setNFT(res);
     } else if (selectRef.current.value === "BakerFarmNFT ($500)") {
       res = back.filter((item) => item.nftaddress === farm500Address);
+      setNFT(res);
+    } else if (selectRef.current.value === "BakerFarmNFT ($1000)") {
+      res = back.filter((item) => item.nftaddress === farm1000Address);
       setNFT(res);
     } else {
       setNFT(back);
@@ -230,6 +238,7 @@ export default function Mint(props) {
                 <option>BakerFarmNFT ($100)</option>
                 <option>BakerFarmNFT ($200)</option>
                 <option>BakerFarmNFT ($500)</option>
+                <option>BakerFarmNFT ($1000)</option>
               </select>
               {/*  <div className="artflex">
                 <img

@@ -7,7 +7,14 @@ import { toast } from "react-toastify";
 import busdABI from "../abis/busd.json";
 import nftABI from "../abis/nft.json";
 import marketABI from "../abis/market.json";
-import { marketAddress, busdAddress } from "../utils/constants";
+import {
+  marketAddress,
+  busdAddress,
+  farm100Address,
+  farm200Address,
+  farm500Address,
+  farm1000Address,
+} from "../utils/constants";
 import axios from "axios";
 
 export default function Resell() {
@@ -87,17 +94,20 @@ export default function Resell() {
   const checkFilter = () => {
     let res;
     if (selectRef.current.value === "BakerFarmNFT ($100)") {
-      res = back.filter(
-        (item) =>
-          item.nftaddress === "0x1A3a36301Ed068Ba257f2F3c5205551713476c09"
-      );
-      console.log(res);
+      res = back.filter((item) => item.nftaddress === farm100Address);
       setNFT(res);
     } else if (selectRef.current.value === "BakerFarmNFT ($200)") {
-      res = back.filter(
-        (item) =>
-          item.nftaddress === "0x326752C8a09a2631ed596000ab5328F18a94FfF6"
-      );
+      res = back.filter((item) => item.nftaddress === farm200Address);
+      console.log(res);
+      setNFT(res);
+    } else if (selectRef.current.value === "BakerFarmNFT ($500)") {
+      console.log(selectRef.current.value);
+      res = back.filter((item) => item.nftaddress === farm500Address);
+      console.log(res);
+      console.log(back);
+      setNFT(res);
+    } else if (selectRef.current.value === "BakerFarmNFT ($1000)") {
+      res = back.filter((item) => item.nftaddress === farm1000Address);
       setNFT(res);
     } else {
       setNFT(back);
@@ -210,6 +220,8 @@ export default function Resell() {
                 <option>All</option>
                 <option>BakerFarmNFT ($100)</option>
                 <option>BakerFarmNFT ($200)</option>
+                <option>BakerFarmNFT ($500)</option>
+                <option>BakerFarmNFT ($1000)</option>
               </select>
               {/*  <div className="artflex">
                 <img

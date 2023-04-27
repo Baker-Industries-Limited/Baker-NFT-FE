@@ -19,8 +19,8 @@ import { AnimatePresence } from "framer-motion";
 import AnimatedRoutes from "./AnimatedRoutes";
 
 function App() {
-  let cursorRef = useRef();
-  let cursorRef2 = useRef();
+  //let cursorRef = useRef();
+  //let cursorRef2 = useRef();
   useEffect(() => {
     // set viewport width, for mobile devices.
     let vh = window.innerHeight * 0.01;
@@ -29,7 +29,7 @@ function App() {
     // To stop the app from flashing, we hide the entire body in the css and then show it when the JavaScript loads.
     gsap.to("body", 0, { css: { visibility: "visible" } });
     // custom cursor
-    const cursorList = document.addEventListener("mousemove", (e) => {
+    /* const cursorList = document.addEventListener("mousemove", (e) => {
       cursorRef.current.setAttribute(
         "style",
         `transform: translate3d(${e.pageX - 10}px, ${e.pageY - 10}px, 0px)`
@@ -38,10 +38,10 @@ function App() {
         "style",
         `transform: translate3d(${e.pageX + 10}px, ${e.pageY + 10}px, 0px)`
       );
-    });
+    }); */
 
     return () => {
-      document.removeEventListener("mousemove", cursorList);
+      //document.removeEventListener("mousemove", cursorList);
     };
   }, []);
   return (

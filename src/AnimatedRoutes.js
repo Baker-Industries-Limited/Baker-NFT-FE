@@ -9,12 +9,18 @@ import Roadmap from "./pages/Roadmap";
 import Fauset from "./pages/Fauset";
 import Home from "./pages/Home";
 
-export default function AnimatedRoutes() {
+export default function AnimatedRoutes(prop) {
   const location = useLocation();
   return (
     <div>
       <Routes location={location} key={location.pathname}>
-        <Route exact path="/" element={<Home />} />
+        <Route
+          exact
+          path="/"
+          element={
+            <Home onMouseEnter={prop.textEnter} onMouseLeave={prop.textLeave} />
+          }
+        />
         <Route exact path="/mint" element={<Mint />} />
         <Route exact path="/collections" element={<Collections />} />
         <Route exact path="/resell" element={<Resell />} />

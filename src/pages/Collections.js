@@ -16,6 +16,7 @@ import {
   farm100Address,
   farm200Address,
   farm500Address,
+  farm1000Address,
 } from "../utils/constants";
 import axios from "axios";
 
@@ -402,6 +403,9 @@ export default function Collections(props) {
     } else if (selectRef.current.value === "BakerFarmNFT ($500)") {
       res = back.filter((item) => item.nftaddress === farm500Address);
       setUSERNFT(res);
+    } else if (selectRef.current.value === "BakerFarmNFT ($1000)") {
+      res = back.filter((item) => item.nftaddress === farm1000Address);
+      setUSERNFT(res);
     } else {
       setUSERNFT(back);
     }
@@ -516,6 +520,8 @@ export default function Collections(props) {
                 <option>All</option>
                 <option>BakerFarmNFT ($100)</option>
                 <option>BakerFarmNFT ($200)</option>
+                <option>BakerFarmNFT ($500)</option>
+                <option>BakerFarmNFT ($1000)</option>
               </select>
               {/*  <div className="artflex">
                 <img
