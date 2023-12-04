@@ -471,6 +471,7 @@ export default function Collections(props) {
                     <option value={farm100Address}>$100 Tiers</option>
                     <option value={farm200Address}>$200 Tiers</option>
                     <option value={farm500Address}>$500 Tiers</option>
+                    <option value={farm1000Address}>$1000 Tiers</option>
                   </select>
                 </div>
               </div>
@@ -494,6 +495,7 @@ export default function Collections(props) {
                     <option value={farm100Address}>$100 Tiers</option>
                     <option value={farm200Address}>$200 Tiers</option>
                     <option value={farm500Address}>$500 Tiers</option>
+                    <option value={farm1000Address}>$1000 Tiers</option>
                   </select>
                 </div>
               </div>
